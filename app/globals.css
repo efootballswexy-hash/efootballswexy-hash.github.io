@@ -931,7 +931,6 @@ textarea{ resize:vertical; min-height:120px; }
     border-radius: 16px;
     padding: 4px;
   }
-  
   .pill-nav a{
     flex: 1 1 30%;
     font-size: 10px;
