@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { WA_LINK, NAV_ITEMS } from "@/lib/constants";
 
 const SOCIALS = [
@@ -15,7 +15,17 @@ const SOCIALS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [mobileQuery, setMobileQuery] = useState("");
   const pathname = usePathname();
+  const router = useRouter();
+
+  function submitSearch(value) {
+    const q = value.trim();
+    if (!q) return;
+    router.push(`/cari?q=${encodeURIComponent(q)}`);
+    setOpen(false);
+  }
 
   return (
     <header className="site-header">
@@ -30,14 +40,27 @@ export default function Header() {
           </Link>
 
           <div className="header-tagline">
-            <span>Sewa Alat Berat</span>
+            <span>Sewa Batching Plant</span>
             <span>Jual Beli Batching Plant</span>
             <span>Sparepart Original</span>
             <span>Kontraktor Konstruksi</span>
           </div>
 
-          <form className="header-search" role="search" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="Apa yang Anda cari?" aria-label="Cari" />
+          <form
+            className="header-search"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              submitSearch(query);
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Apa yang Anda cari?"
+              aria-label="Cari"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
             <button type="submit" aria-label="Cari">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
@@ -85,6 +108,28 @@ export default function Header() {
           </button>
         </div>
         <div className={`mobile-nav${open ? " open" : ""}`}>
+          <form
+            className="mobile-search"
+            role="search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              submitSearch(mobileQuery);
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Apa yang Anda cari?"
+              aria-label="Cari"
+              value={mobileQuery}
+              onChange={(e) => setMobileQuery(e.target.value)}
+            />
+            <button type="submit" aria-label="Cari">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </form>
           {NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>
               {item.label}

@@ -4,7 +4,7 @@ import { WA_LINK } from "@/lib/constants";
 export const metadata = {
   title: "Layanan Utama",
   description:
-    "Layanan spesialis penyediaan sparepart batching plant & alat berat, serta jual beli dan sewa unit kondisi prima.",
+    "Layanan spesialis penyediaan sparepart batching plant, serta jual beli dan sewa unit kondisi prima.",
 };
 
 const STEPS = [
@@ -21,7 +21,7 @@ export default function LayananPage() {
         <div className="container">
           <span className="mono-tag" style={{ color: "#FF7F33" }}>PILAR LAYANAN UTAMA</span>
           <h1>Sparepart &amp; Sewa Batching Plant</h1>
-          <p>Solusi terpadu pasokan sparepart original/OEM batching plant &amp; alat berat, serta penyewaan dan jual beli armada kondisi prima.</p>
+          <p>Solusi terpadu pasokan sparepart original/OEM batching plant, serta penyewaan dan jual beli armada kondisi prima.</p>
         </div>
       </section>
 
@@ -29,12 +29,12 @@ export default function LayananPage() {
         <div className="container grid-2">
           <div className="service-card bracket" id="sparepart">
             <span className="service-index">01</span>
-            <h3>Sparepart Batching Plant &amp; Alat Berat</h3>
+            <h3>Sparepart Batching Plant</h3>
             <p>Pasokan suku cadang hidrolik, mesin, undercarriage, filter, dan komponen batching plant berkategori lengkap.</p>
             <span className="mono-tag" style={{ marginBottom: 12 }}>KEUNGGULAN LAYANAN</span>
             <ul className="feature-list">
               <li>Jaminan Original &amp; OEM</li>
-              <li>Sparepart Batching Plant &amp; Alat Berat</li>
+              <li>Sparepart Batching Plant</li>
               <li>Pengiriman ekspres ke lokasi</li>
               <li>Konsultasi part number &amp; teknis</li>
             </ul>
@@ -43,7 +43,7 @@ export default function LayananPage() {
           <div className="service-card bracket" id="sewa">
             <span className="service-index">02</span>
             <h3>Sewa &amp; Jual Beli Batching Plant</h3>
-            <p>Layanan penyewaan serta jual beli Batching Plant (Wet Mix, Dry Mix, Mobile) dan armada alat berat kondisi prima.</p>
+            <p>Layanan penyewaan serta jual beli Batching Plant (Wet Mix, Dry Mix, Mobile) dengan armada kondisi prima.</p>
             <span className="mono-tag" style={{ marginBottom: 12 }}>KEUNGGULAN LAYANAN</span>
             <ul className="feature-list">
               <li>Jual Beli &amp; Sewa Harian, Bulanan, Tahunan</li>
@@ -82,7 +82,7 @@ export default function LayananPage() {
         <div className="container">
           <div>
             <span className="mono-tag" style={{ color: "#FF7F33" }}>KONSULTASI &amp; PENAWARAN</span>
-            <h2 style={{ marginTop: 14 }}>Butuh Sewa Alat Berat atau Batching Plant?</h2>
+            <h2 style={{ marginTop: 14 }}>Butuh Sewa Batching Plant?</h2>
             <p>Hubungi tim kami via WhatsApp untuk konsultasi unit, cek ketersediaan armada, dan dapatkan penawaran harga terbaik sekarang.</p>
           </div>
           <div className="cta-actions">

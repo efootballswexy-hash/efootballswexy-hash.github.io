@@ -26,12 +26,9 @@ export default function ContactForm() {
       <div className="form-row-2">
         <div>
           <label htmlFor="unit">Kebutuhan Unit</label>
-          <select id="unit" name="unit" defaultValue="Excavator">
-            <option>Excavator</option>
-            <option>Bulldozer</option>
-            <option>Wheel Loader</option>
-            <option>Vibro Roller</option>
-            <option>Crane</option>
+          <select id="unit" name="unit" defaultValue="Wet Mix Batching Plant">
+            <option>Wet Mix Batching Plant</option>
+            <option>Dry Mix Batching Plant</option>
             <option>Mobile Batching Plant</option>
             <option>Sparepart</option>
             <option>Lainnya</option>

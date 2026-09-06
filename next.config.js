@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // Wajib ditambahkan jika Anda menggunakan next/image
+    unoptimized: true,
   },
 };
 

@@ -1,5 +1,6 @@
 // Blueprint-style inline SVG illustrations (no external image dependency).
-// Rendered via dangerouslySetInnerHTML to keep the exact same markup as design.
+// File ini HANYA berisi data (string), tanpa "use client", supaya aman
+// diimpor dari Server Component manapun.
 
 export const HERO_ART = `
 <svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
@@ -74,58 +75,32 @@ function wrap(inner, label) {
 </svg>`;
 }
 
-export const EXCAVATOR = wrap(`
+export const WET_MIX_BP = wrap(`
   <g stroke="#FF7F33" stroke-width="2.2" fill="none" stroke-linejoin="round">
-    <rect x="110" y="170" width="90" height="34" rx="3"/>
-    <circle cx="130" cy="222" r="20"/>
-    <circle cx="180" cy="222" r="20"/>
-    <path d="M115 170 L150 120 L200 108 L215 130 L185 150 L150 170"/>
-    <path d="M200 108 L245 95 L262 120 L235 150"/>
-    <path d="M262 120 L280 150 L268 172"/>
+    <rect x="95" y="130" width="55" height="95"/>
+    <path d="M95 130 L122 95 L150 130"/>
+    <line x1="95" y1="160" x2="150" y2="160"/>
+    <line x1="95" y1="190" x2="150" y2="190"/>
+    <ellipse cx="235" cy="178" rx="40" ry="22"/>
+    <line x1="195" y1="178" x2="195" y2="228"/>
+    <line x1="275" y1="178" x2="275" y2="228"/>
+    <line x1="195" y1="228" x2="275" y2="228"/>
+    <path d="M175 138 q10 -14 20 0" stroke-width="1.6"/>
+    <line x1="185" y1="138" x2="185" y2="158"/>
   </g>
-`, "EXCAVATOR &middot; HYDRAULIC");
+`, "WET MIX BATCHING PLANT");
 
-export const BULLDOZER = wrap(`
+export const DRY_MIX_BP = wrap(`
   <g stroke="#2E85EC" stroke-width="2.2" fill="none" stroke-linejoin="round">
-    <rect x="120" y="150" width="120" height="38" rx="3"/>
-    <path d="M240 150 L270 130 L270 170 L240 188"/>
-    <path d="M85 190 L85 130 L100 150 L100 190 Z"/>
-    <line x1="100" y1="150" x2="150" y2="150"/>
-    <circle cx="140" cy="222" r="6"/><circle cx="160" cy="222" r="6"/><circle cx="180" cy="222" r="6"/><circle cx="200" cy="222" r="6"/>
-    <line x1="120" y1="235" x2="230" y2="235"/>
+    <rect x="90" y="130" width="55" height="95"/>
+    <path d="M90 130 L117 95 L145 130"/>
+    <line x1="150" y1="165" x2="220" y2="140"/>
+    <line x1="150" y1="180" x2="220" y2="155"/>
+    <rect x="225" y="150" width="70" height="35" rx="4"/>
+    <ellipse cx="310" cy="167" rx="18" ry="18"/>
+    <circle cx="245" cy="230" r="10"/><circle cx="285" cy="230" r="10"/>
   </g>
-`, "BULLDOZER &middot; TRACK-TYPE");
-
-export const WHEEL_LOADER = wrap(`
-  <g stroke="#FF7F33" stroke-width="2.2" fill="none" stroke-linejoin="round">
-    <rect x="150" y="150" width="90" height="40" rx="4"/>
-    <path d="M90 190 L90 145 L118 140 L140 165 L140 190 Z"/>
-    <path d="M90 155 L60 150 L58 175 L90 178"/>
-    <circle cx="150" cy="230" r="22"/>
-    <circle cx="225" cy="230" r="22"/>
-  </g>
-`, "WHEEL LOADER");
-
-export const VIBRO_ROLLER = wrap(`
-  <g stroke="#2E85EC" stroke-width="2.2" fill="none" stroke-linejoin="round">
-    <circle cx="140" cy="205" r="30"/>
-    <rect x="170" y="165" width="70" height="40" rx="4"/>
-    <circle cx="255" cy="215" r="22"/>
-    <line x1="200" y1="165" x2="200" y2="130"/>
-    <line x1="200" y1="130" x2="230" y2="130"/>
-  </g>
-`, "VIBRO ROLLER &middot; COMPACTOR");
-
-export const CRANE = wrap(`
-  <g stroke="#FF7F33" stroke-width="2.2" fill="none" stroke-linejoin="round">
-    <rect x="150" y="200" width="70" height="30" rx="3"/>
-    <circle cx="165" cy="245" r="14"/><circle cx="205" cy="245" r="14"/>
-    <line x1="185" y1="200" x2="185" y2="70"/>
-    <line x1="185" y1="70" x2="300" y2="120"/>
-    <line x1="185" y1="90" x2="270" y2="125"/>
-    <line x1="300" y1="120" x2="300" y2="175"/>
-  </g>
-`, "MOBILE CRANE");
+`, "DRY MIX BATCHING PLANT");
 
 export const MOBILE_BP = wrap(`
   <g stroke="#2E85EC" stroke-width="2.2" fill="none" stroke-linejoin="round">
@@ -140,21 +115,7 @@ export const MOBILE_BP = wrap(`
 `, "MOBILE BATCHING PLANT");
 
 export const ICONS = {
-  "Excavator": EXCAVATOR,
-  "Bulldozer": BULLDOZER,
-  "Wheel Loader": WHEEL_LOADER,
-  "Vibro Roller": VIBRO_ROLLER,
-  "Crane": CRANE,
+  "Wet Mix Batching Plant": WET_MIX_BP,
+  "Dry Mix Batching Plant": DRY_MIX_BP,
   "Mobile Batching Plant": MOBILE_BP,
 };
-
-/** Renders a raw SVG markup string. Use for icons above. */
-export function Svg({ html, className, style }) {
-  return (
-    <div
-      className={className}
-      style={style}
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-}

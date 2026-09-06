@@ -4,7 +4,7 @@ import { WA_LINK } from "@/lib/constants";
 export const metadata = {
   title: "Kontak Kami",
   description:
-    "Hubungi Kresna Abadi Jaya untuk konsultasi sewa alat berat, batching plant, dan sparepart.",
+    "Hubungi Kresna Abadi Jaya untuk konsultasi sewa batching plant dan sparepart.",
 };
 
 export default function KontakPage() {
@@ -14,7 +14,7 @@ export default function KontakPage() {
         <div className="container">
           <span className="mono-tag" style={{ color: "#FF7F33" }}>KONSULTASI &amp; PENAWARAN</span>
           <h1>Hubungi Kresna Abadi Jaya</h1>
-          <p>Sampaikan kebutuhan sewa alat berat, batching plant, atau sparepart Anda &mdash; tim kami akan segera merespons.</p>
+          <p>Sampaikan kebutuhan sewa batching plant atau sparepart Anda &mdash; tim kami akan segera merespons.</p>
         </div>
       </section>
 

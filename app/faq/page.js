@@ -4,7 +4,7 @@ import { WA_LINK, FAQS } from "@/lib/constants";
 export const metadata = {
   title: "FAQ",
   description:
-    "Pertanyaan yang sering diajukan seputar prosedur sewa alat berat, pembayaran, dan garansi operasional.",
+    "Pertanyaan yang sering diajukan seputar prosedur sewa batching plant, pembayaran, dan garansi operasional.",
 };
 
 export default function FaqPage() {
@@ -14,7 +14,7 @@ export default function FaqPage() {
         <div className="container">
           <span className="mono-tag" style={{ color: "#FF7F33" }}>INFORMASI PROSEDUR &amp; PENYEWAAN</span>
           <h1>Pertanyaan yang Sering Diajukan</h1>
-          <p>Berikut adalah beberapa pertanyaan umum terkait prosedur sewa alat berat, pembayaran, dan garansi operasional Kresna Abadi Jaya.</p>
+          <p>Berikut adalah beberapa pertanyaan umum terkait prosedur sewa batching plant, pembayaran, dan garansi operasional Kresna Abadi Jaya.</p>
         </div>
       </section>
 

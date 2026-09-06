@@ -2,9 +2,9 @@ import ProductCatalog from "@/components/ProductCatalog";
 import { WA_LINK } from "@/lib/constants";
 
 export const metadata = {
-  title: "Katalog Alat Berat",
+  title: "Katalog Batching Plant",
   description:
-    "Daftar unit alat berat siap sewa harian, bulanan, dan tahunan dengan jaminan kondisi operasional prima.",
+    "Daftar unit batching plant siap sewa harian, bulanan, dan tahunan dengan jaminan kondisi operasional prima.",
 };
 
 export default function ProdukPage() {
@@ -13,8 +13,8 @@ export default function ProdukPage() {
       <section className="page-hero blueprint-bg dark">
         <div className="container">
           <span className="mono-tag" style={{ color: "#FF7F33" }}>KATALOG ARMADA &amp; SPESIFIKASI</span>
-          <h1>Penyewaan Alat Berat</h1>
-          <p>Daftar unit alat berat siap sewa harian, bulanan, dan tahunan dengan jaminan kondisi operasional prima.</p>
+          <h1>Penyewaan Batching Plant</h1>
+          <p>Daftar unit batching plant siap sewa harian, bulanan, dan tahunan dengan jaminan kondisi operasional prima.</p>
         </div>
       </section>
 
@@ -28,7 +28,7 @@ export default function ProdukPage() {
         <div className="container">
           <div>
             <span className="mono-tag" style={{ color: "#FF7F33" }}>KONSULTASI &amp; PENAWARAN</span>
-            <h2 style={{ marginTop: 14 }}>Butuh Spesifikasi Khusus Unit Alat Berat?</h2>
+            <h2 style={{ marginTop: 14 }}>Butuh Spesifikasi Khusus Unit Batching Plant?</h2>
             <p>Jika jenis unit yang Anda cari belum tercantum di katalog, hubungi tim kami untuk konsultasi armada pengganti.</p>
           </div>
           <div className="cta-actions">

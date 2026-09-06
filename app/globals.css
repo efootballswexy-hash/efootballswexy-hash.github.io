@@ -834,3 +834,62 @@ textarea{ resize:vertical; min-height:120px; }
   .reveal{ opacity:1; transform:none; transition:none; }
   html{ scroll-behavior:auto; }
 }
+
+/* ---------- Rental request modal ---------- */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(8,24,38,0.7);
+  z-index:300;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  overflow-y:auto;
+}
+.modal-box{
+  position:relative;
+  background:var(--white);
+  border:1px solid var(--grid-line);
+  max-width:480px;
+  width:100%;
+  padding:36px 32px 32px;
+  margin:auto;
+}
+.modal-close{
+  position:absolute;
+  top:16px; right:16px;
+  width:32px; height:32px;
+  border:1px solid var(--grid-line);
+  background:var(--white);
+  color:var(--ink-600);
+  font-size:20px;
+  line-height:1;
+  display:flex; align-items:center; justify-content:center;
+}
+.modal-close:hover{ border-color:var(--orange-600); color:var(--orange-600); }
+.modal-title{
+  font-size:22px;
+  margin-top:14px;
+  margin-bottom:6px;
+}
+.modal-unit-meta{
+  font-family:var(--font-mono);
+  font-size:12px;
+  color:var(--ink-600);
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  margin-bottom:24px;
+}
+.modal-error{
+  color:var(--orange-600);
+  font-size:13px;
+  margin:-6px 0 0;
+}
+.modal-success p{
+  font-size:14px;
+  color:var(--ink-600);
+  margin-bottom:16px;
+  text-transform:none;
+}
+.modal-success strong{ color:var(--navy-900); }

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import FaqAccordion from "@/components/FaqAccordion";
-import { HERO_ART, ICONS, Svg } from "@/components/icons";
+import { HERO_ART, ICONS } from "@/components/icons";
+import Svg from "@/components/Svg";
 import { WA_LINK, FAQS } from "@/lib/constants";
 
 const MINI_UNITS = [
-  { key: "Excavator", name: "Excavator", status: "Tersedia", spec1: "20\u201330 Ton", spec2: "Hidrolik" },
-  { key: "Wheel Loader", name: "Wheel Loader", status: "Tersedia", spec1: "3\u20135 m\u00B3", spec2: "Bucket" },
+  { key: "Wet Mix Batching Plant", name: "Wet Mix Batching Plant", status: "Tersedia", spec1: "30\u201360 m\u00B3/jam", spec2: "Wet Mix" },
+  { key: "Dry Mix Batching Plant", name: "Dry Mix Batching Plant", status: "Tersedia", spec1: "25\u201350 m\u00B3/jam", spec2: "Dry Mix" },
   { key: "Mobile Batching Plant", name: "Mobile Batching Plant", status: "Tersedia", spec1: "25\u201360 m\u00B3/jam", spec2: "Wet/Dry Mix" },
 ];
 
@@ -23,15 +24,15 @@ export default function HomePage() {
       <section className="hero">
         <div className="container">
           <div>
-            <span className="hero-eyebrow mono-tag">KONTRAKTOR &amp; SEWA ALAT BERAT</span>
+            <span className="hero-eyebrow mono-tag">KONTRAKTOR &amp; SEWA BATCHING PLANT</span>
             <h1>
-              Armada Batching Plant &amp; Alat Berat <em>Siap Kerja</em> Untuk
+              Armada Batching Plant <em>Siap Kerja</em> Untuk
               Proyek Anda
             </h1>
             <p className="lead">
-              Penyediaan pemborongan proyek tanah &amp; bangunan, unit alat
-              berat prima, serta suku cadang original yang tepat waktu dan
-              terpercaya di seluruh Indonesia.
+              Penyediaan pemborongan proyek tanah &amp; bangunan, unit
+              batching plant prima, serta suku cadang original yang tepat
+              waktu dan terpercaya di seluruh Indonesia.
             </p>
             <div className="hero-actions">
               <Link href="/kontak" className="btn btn-primary">
@@ -44,7 +45,7 @@ export default function HomePage() {
             <div className="stat-strip">
               <div><span className="stat-num">10<span>+</span></span><span className="stat-label">Tahun Pengalaman</span></div>
               <div><span className="stat-num">50<span>+</span></span><span className="stat-label">Proyek Ditangani</span></div>
-              <div><span className="stat-num">30<span>+</span></span><span className="stat-label">Unit Alat Berat</span></div>
+              <div><span className="stat-num">30<span>+</span></span><span className="stat-label">Unit Batching Plant</span></div>
               <div><span className="stat-num">10<span>+</span></span><span className="stat-label">Area Layanan</span></div>
             </div>
           </div>
@@ -73,16 +74,16 @@ export default function HomePage() {
             </h2>
             <p>
               <strong>Kresna Abadi Jaya</strong> bergerak dalam bidang
-              kontraktor konstruksi, sewa alat berat, dan penjualan suku
+              kontraktor konstruksi, sewa batching plant, dan penjualan suku
               cadang (sparepart) original. Kami mengombinasikan keahlian
-              teknik pemborongan dengan armada alat berat yang selalu siap
-              kerja.
+              teknik pemborongan dengan armada batching plant yang selalu
+              siap kerja.
             </p>
             <p>
               Dengan dukungan workshop depo dan tim mekanik berpengalaman,
-              kami memastikan seluruh unit seperti Excavator, Bulldozer,
-              Wheel Loader, dan Mobile Batching Plant selalu dalam kondisi
-              prima.
+              kami memastikan seluruh unit Batching Plant &mdash; baik Wet
+              Mix, Dry Mix, maupun Mobile Batching Plant &mdash; selalu
+              dalam kondisi prima.
             </p>
             <ul className="check-list">
               <li>Unit siap kerja dengan riwayat perawatan berkala</li>
@@ -108,8 +109,8 @@ export default function HomePage() {
           <Reveal className="grid-2" as="div">
             <div className="service-card bracket">
               <span className="service-index">01 / SPAREPART</span>
-              <h3>Sparepart Batching Plant &amp; Alat Berat</h3>
-              <p>Pasokan suku cadang hidrolik, mesin, undercarriage, filter, dan komponen batching plant berkategori lengkap.</p>
+              <h3>Sparepart Batching Plant</h3>
+              <p>Pasokan suku cadang mesin, mixer, timbangan, dan komponen batching plant berkategori lengkap.</p>
               <ul className="feature-list">
                 <li>Jaminan Original &amp; OEM</li>
                 <li>Pengiriman ekspres ke lokasi proyek</li>
@@ -120,7 +121,7 @@ export default function HomePage() {
             <div className="service-card bracket">
               <span className="service-index">02 / SEWA &amp; JUAL BELI</span>
               <h3>Sewa &amp; Jual Beli Batching Plant</h3>
-              <p>Layanan penyewaan serta jual beli Batching Plant (Wet Mix, Dry Mix, Mobile) dan armada alat berat kondisi prima.</p>
+              <p>Layanan penyewaan serta jual beli Batching Plant (Wet Mix, Dry Mix, Mobile) dengan armada kondisi prima.</p>
               <ul className="feature-list">
                 <li>Sewa Harian, Bulanan &amp; Tahunan</li>
                 <li>Wet Mix, Dry Mix &amp; Mobile Batching Plant</li>
@@ -149,7 +150,7 @@ export default function HomePage() {
                   <span className="unit-status">{u.status}</span>
                 </div>
                 <div className="unit-body">
-                  <span className="unit-cat">Alat Berat</span>
+                  <span className="unit-cat">Batching Plant</span>
                   <h3>{u.name}</h3>
                   <div className="unit-specs">
                     <div><b>{u.spec1}</b>Kapasitas</div>
@@ -202,8 +203,8 @@ export default function HomePage() {
               <span className="mono-tag">PROSEDUR &amp; PENYEWAAN</span>
               <h2>Pertanyaan yang Sering Diajukan</h2>
               <p>
-                Beberapa pertanyaan umum terkait prosedur sewa alat berat,
-                pembayaran, dan garansi operasional.
+                Beberapa pertanyaan umum terkait prosedur sewa batching
+                plant, pembayaran, dan garansi operasional.
               </p>
             </div>
             <Link href="/faq" className="card-link">Lihat FAQ Selengkapnya &rarr;</Link>
@@ -216,7 +217,7 @@ export default function HomePage() {
         <div className="container">
           <div>
             <span className="mono-tag" style={{ color: "#FF7F33" }}>KONSULTASI &amp; PENAWARAN</span>
-            <h2 style={{ marginTop: 14 }}>Butuh Sewa Alat Berat atau Batching Plant?</h2>
+            <h2 style={{ marginTop: 14 }}>Butuh Sewa Batching Plant?</h2>
             <p>Hubungi tim kami via WhatsApp untuk konsultasi unit, cek ketersediaan armada, dan dapatkan penawaran harga terbaik sekarang.</p>
           </div>
           <div className="cta-actions">

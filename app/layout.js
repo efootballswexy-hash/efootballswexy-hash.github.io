@@ -5,11 +5,11 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const metadata = {
   title: {
-    default: "Kresna Abadi Jaya | Kontraktor Konstruksi & Sewa Alat Berat",
+    default: "Kresna Abadi Jaya | Kontraktor Konstruksi & Sewa Batching Plant",
     template: "%s | Kresna Abadi Jaya",
   },
   description:
-    "Penyedia jasa kontraktor konstruksi & tanah, sewa alat berat, sparepart original, dan pemborongan proyek terpercaya di Indonesia.",
+    "Penyedia jasa kontraktor konstruksi & tanah, sewa batching plant, sparepart original, dan pemborongan proyek terpercaya di Indonesia.",
   icons: {
     icon:
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A2036'/%3E%3Ctext x='16' y='22' font-size='16' fill='%23FF6A13' text-anchor='middle' font-family='Arial'%3EK%3C/text%3E%3C/svg%3E",

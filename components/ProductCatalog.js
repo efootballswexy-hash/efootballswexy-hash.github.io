@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { UNITS, FILTERS, WA_LINK } from "@/lib/constants";
-import { ICONS, Svg } from "@/components/icons";
+import { UNITS, FILTERS } from "@/lib/constants";
+import { ICONS } from "@/components/icons";
+import Svg from "@/components/Svg";
+import RentalRequestForm from "@/components/RentalRequestForm";
 
 export default function ProductCatalog() {
   const [active, setActive] = useState("Semua");
+  const [selectedUnit, setSelectedUnit] = useState(null);
 
   const visible =
     active === "Semua" ? UNITS : UNITS.filter((u) => u.cat === active);
@@ -43,19 +46,25 @@ export default function ProductCatalog() {
                   <div><b>{unit.extra}</b>Spesifikasi</div>
                   <div><b>Ready</b>Dokumen</div>
                 </div>
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
                   className="btn btn-navy btn-block"
+                  onClick={() => setSelectedUnit(unit)}
                 >
                   Ajukan Sewa
-                </a>
+                </button>
               </div>
             </div>
           );
         })}
       </div>
+
+      {selectedUnit && (
+        <RentalRequestForm
+          unit={selectedUnit}
+          onClose={() => setSelectedUnit(null)}
+        />
+      )}
     </>
   );
 }

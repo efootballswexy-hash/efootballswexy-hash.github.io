@@ -16,9 +16,9 @@ export default function Footer() {
               </span>
             </div>
             <p>
-              Kontraktor konstruksi, penyedia sewa alat berat, armada batching
-              plant, dan sparepart original yang melayani proyek di seluruh
-              Indonesia.
+              Kontraktor konstruksi, penyedia sewa dan jual beli batching
+              plant, serta sparepart original yang melayani proyek di
+              seluruh Indonesia.
             </p>
             <div className="social-row" style={{ marginTop: 22 }}>
               <a href="#" aria-label="Facebook">FB</a>
@@ -43,10 +43,10 @@ export default function Footer() {
           <div>
             <h4>Kategori Unit</h4>
             <div className="footer-links">
-              <Link href="/produk">Excavator</Link>
-              <Link href="/produk">Bulldozer</Link>
-              <Link href="/produk">Wheel Loader</Link>
+              <Link href="/produk">Wet Mix Batching Plant</Link>
+              <Link href="/produk">Dry Mix Batching Plant</Link>
               <Link href="/produk">Mobile Batching Plant</Link>
+              <Link href="/layanan#sparepart">Sparepart</Link>
             </div>
           </div>
 

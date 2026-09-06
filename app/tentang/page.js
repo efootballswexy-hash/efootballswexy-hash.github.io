@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ICONS, Svg } from "@/components/icons";
+import { ICONS } from "@/components/icons";
+import Svg from "@/components/Svg";
 import { WA_LINK } from "@/lib/constants";
 
 export const metadata = {
   title: "Tentang Kami",
   description:
-    "Profil Kresna Abadi Jaya, penyedia sewa alat berat, armada batching plant, dan penjualan suku cadang (sparepart) original.",
+    "Profil Kresna Abadi Jaya, penyedia sewa batching plant dan penjualan suku cadang (sparepart) original.",
 };
 
 export default function TentangPage() {
@@ -15,7 +16,7 @@ export default function TentangPage() {
         <div className="container">
           <span className="mono-tag" style={{ color: "#FF7F33" }}>PROFIL PERUSAHAAN</span>
           <h1>Tentang Kresna Abadi Jaya</h1>
-          <p>Mitra terpercaya dalam penyediaan alat berat, suku cadang, dan pemborongan proyek konstruksi nasional.</p>
+          <p>Mitra terpercaya dalam penyediaan batching plant, suku cadang, dan pemborongan proyek konstruksi nasional.</p>
         </div>
       </section>
 
@@ -23,14 +24,14 @@ export default function TentangPage() {
         <div className="container split">
           <div className="split-media">
             <div className="frame" style={{ background: "#0A2036" }}>
-              <Svg html={ICONS["Excavator"]} />
+              <Svg html={ICONS["Wet Mix Batching Plant"]} />
             </div>
           </div>
           <div className="split-body">
             <span className="mono-tag">TENTANG KAMI</span>
             <h2 style={{ marginTop: 14 }}>Membangun Kepercayaan Melalui Kualitas &amp; Dedikasi</h2>
-            <p><strong>Kresna Abadi Jaya</strong> bergerak dalam bidang kontraktor konstruksi, sewa alat berat, dan penjualan suku cadang (sparepart) original. Kami mengombinasikan keahlian teknik pemborongan dengan armada alat berat yang selalu siap kerja.</p>
-            <p>Dengan dukungan workshop depo dan tim mekanik berpengalaman, kami memastikan seluruh unit seperti Excavator, Bulldozer, Wheel Loader, dan Mobile Batching Plant selalu dalam kondisi prima.</p>
+            <p><strong>Kresna Abadi Jaya</strong> bergerak dalam bidang kontraktor konstruksi, sewa batching plant, dan penjualan suku cadang (sparepart) original. Kami mengombinasikan keahlian teknik pemborongan dengan armada batching plant yang selalu siap kerja.</p>
+            <p>Dengan dukungan workshop depo dan tim mekanik berpengalaman, kami memastikan seluruh unit Batching Plant &mdash; baik Wet Mix, Dry Mix, maupun Mobile Batching Plant &mdash; selalu dalam kondisi prima.</p>
             <Link href="/kontak" className="card-link">Konsultasikan Proyek Anda &rarr;</Link>
           </div>
         </div>
@@ -74,13 +75,13 @@ export default function TentangPage() {
             <div className="vm-card">
               <span className="vm-tag">01 / Visi</span>
               <h3>Visi Perusahaan</h3>
-              <p>Menjadi kontraktor konstruksi dan penyedia sewa alat berat terpercaya yang diakui atas keandalan armada, keselamatan kerja, dan mutu layanan.</p>
+              <p>Menjadi kontraktor konstruksi dan penyedia sewa batching plant terpercaya yang diakui atas keandalan armada, keselamatan kerja, dan mutu layanan.</p>
             </div>
             <div className="vm-card">
               <span className="vm-tag">02 / Misi</span>
               <h3>Misi Perusahaan</h3>
               <ul>
-                <li>Menyediakan armada alat berat dalam kondisi operasional prima.</li>
+                <li>Menyediakan armada batching plant dalam kondisi operasional prima.</li>
                 <li>Memberikan pelayanan pemborongan konstruksi profesional.</li>
                 <li>Mendukung efisiensi biaya proyek mitra melalui skema sewa yang transparan.</li>
               </ul>
@@ -89,7 +90,7 @@ export default function TentangPage() {
           <div className="stat-strip" style={{ borderTop: "1px solid var(--grid-line)", marginTop: 56, paddingTop: 32 }}>
             <div style={{ borderLeftColor: "var(--grid-line)" }}><span className="stat-num" style={{ color: "var(--navy-900)" }}>10<span style={{ color: "var(--orange-600)" }}>+</span></span><span className="stat-label" style={{ color: "var(--ink-600)" }}>Tahun Pengalaman</span></div>
             <div style={{ borderLeftColor: "var(--grid-line)" }}><span className="stat-num" style={{ color: "var(--navy-900)" }}>50<span style={{ color: "var(--orange-600)" }}>+</span></span><span className="stat-label" style={{ color: "var(--ink-600)" }}>Proyek Ditangani</span></div>
-            <div style={{ borderLeftColor: "var(--grid-line)" }}><span className="stat-num" style={{ color: "var(--navy-900)" }}>30<span style={{ color: "var(--orange-600)" }}>+</span></span><span className="stat-label" style={{ color: "var(--ink-600)" }}>Unit Alat Berat</span></div>
+            <div style={{ borderLeftColor: "var(--grid-line)" }}><span className="stat-num" style={{ color: "var(--navy-900)" }}>30<span style={{ color: "var(--orange-600)" }}>+</span></span><span className="stat-label" style={{ color: "var(--ink-600)" }}>Unit Batching Plant</span></div>
             <div style={{ borderLeftColor: "var(--grid-line)" }}><span className="stat-num" style={{ color: "var(--navy-900)" }}>10<span style={{ color: "var(--orange-600)" }}>+</span></span><span className="stat-label" style={{ color: "var(--ink-600)" }}>Area Layanan Utama</span></div>
           </div>
         </div>
@@ -114,7 +115,7 @@ export default function TentangPage() {
         <div className="container">
           <div>
             <span className="mono-tag" style={{ color: "#FF7F33" }}>KONSULTASI &amp; PENAWARAN</span>
-            <h2 style={{ marginTop: 14 }}>Butuh Sewa Alat Berat atau Batching Plant?</h2>
+            <h2 style={{ marginTop: 14 }}>Butuh Sewa Batching Plant?</h2>
             <p>Hubungi tim kami via WhatsApp untuk konsultasi unit, cek ketersediaan armada, dan dapatkan penawaran harga terbaik sekarang.</p>
           </div>
           <div className="cta-actions">
